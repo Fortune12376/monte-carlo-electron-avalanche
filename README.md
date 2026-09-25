@@ -22,9 +22,9 @@ inside a cylindrical cathode of radius
 
 For an ideal long coaxial geometry, end effects are neglected and the electric-field magnitude is
 
-\[
+```math
 E(r)=\frac{V}{r\ln(r_c/r_a)}.
-\]
+```
 
 An electron is accelerated toward the anode. Candidate free-flight times are sampled from an exponential distribution using a constant null-collision rate. Elastic collisions randomise the direction while preserving speed; ionisation events reset the transported electron to thermal energy and create a secondary electron at the collision position.
 
