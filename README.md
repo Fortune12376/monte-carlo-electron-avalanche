@@ -4,6 +4,8 @@ A compact scientific-computing project that simulates electron transport and ava
 
 ![Monte Carlo avalanche overview](figures/avalanche_overview.png)
 
+**Live Demo Link**: https://monte-carlo-electron-avalanche-szdcuc7dqeuamvzfh67hbk.streamlit.app/
+
 ## Why this project
 
 This repository presents the model as a standalone, reproducible scientific-computing project with a clean Python API, tests, literature context, saved example results, and an interactive Streamlit interface.
