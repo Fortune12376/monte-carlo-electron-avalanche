@@ -1,0 +1,401 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numba": "0.68.0",
+  "numpy": "2.5.4",
+  "method": "Warm public API timings including NumPy conversion; alternating backend order; no plotting or JIT compilation; five seeds per configuration.",
+  "runs": [
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 0,
+      "backend": "Numba",
+      "seconds": 0.005798400001367554,
+      "electrons": 9,
+      "points": 19,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 0,
+      "backend": "C99",
+      "seconds": 0.005077699999674223,
+      "electrons": 9,
+      "points": 17,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 1,
+      "backend": "C99",
+      "seconds": 0.004637300000467803,
+      "electrons": 9,
+      "points": 20,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 1,
+      "backend": "Numba",
+      "seconds": 0.005757300001278054,
+      "electrons": 9,
+      "points": 19,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 2,
+      "backend": "Numba",
+      "seconds": 0.005958699999609962,
+      "electrons": 9,
+      "points": 18,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 2,
+      "backend": "C99",
+      "seconds": 0.004893500001344364,
+      "electrons": 9,
+      "points": 18,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 3,
+      "backend": "C99",
+      "seconds": 0.00558669999736594,
+      "electrons": 9,
+      "points": 21,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 3,
+      "backend": "Numba",
+      "seconds": 0.0057377999983145855,
+      "electrons": 9,
+      "points": 18,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 42,
+      "backend": "Numba",
+      "seconds": 0.0057957999961217865,
+      "electrons": 10,
+      "points": 20,
+      "truncated": false
+    },
+    {
+      "voltage": 600,
+      "radius_m": 0.0006,
+      "cap": 5000,
+      "seed": 42,
+      "backend": "C99",
+      "seconds": 0.005286100000375882,
+      "electrons": 9,
+      "points": 19,
+      "truncated": false
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 0,
+      "backend": "Numba",
+      "seconds": 2.0654031000012765,
+      "electrons": 5000,
+      "points": 10559,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 0,
+      "backend": "C99",
+      "seconds": 1.6521404000013717,
+      "electrons": 5000,
+      "points": 10545,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 1,
+      "backend": "C99",
+      "seconds": 1.8793984000003547,
+      "electrons": 5000,
+      "points": 10572,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 1,
+      "backend": "Numba",
+      "seconds": 2.238553300005151,
+      "electrons": 5000,
+      "points": 10588,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 2,
+      "backend": "Numba",
+      "seconds": 2.1754197999980533,
+      "electrons": 5000,
+      "points": 10660,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 2,
+      "backend": "C99",
+      "seconds": 1.2745671000011498,
+      "electrons": 5000,
+      "points": 10564,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 3,
+      "backend": "C99",
+      "seconds": 1.2904213000001619,
+      "electrons": 5000,
+      "points": 10531,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 3,
+      "backend": "Numba",
+      "seconds": 1.944404800000484,
+      "electrons": 5000,
+      "points": 10609,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 42,
+      "backend": "Numba",
+      "seconds": 2.0275331000011647,
+      "electrons": 5000,
+      "points": 10557,
+      "truncated": true
+    },
+    {
+      "voltage": 1000,
+      "radius_m": 0.003,
+      "cap": 5000,
+      "seed": 42,
+      "backend": "C99",
+      "seconds": 1.5809602000008454,
+      "electrons": 5000,
+      "points": 10610,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 0,
+      "backend": "Numba",
+      "seconds": 2.101739199999429,
+      "electrons": 5000,
+      "points": 11241,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 0,
+      "backend": "C99",
+      "seconds": 1.8533650999961537,
+      "electrons": 5000,
+      "points": 11233,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 1,
+      "backend": "C99",
+      "seconds": 1.793765300004452,
+      "electrons": 5000,
+      "points": 11157,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 1,
+      "backend": "Numba",
+      "seconds": 2.406154099997366,
+      "electrons": 5000,
+      "points": 11149,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 2,
+      "backend": "Numba",
+      "seconds": 2.145871000000625,
+      "electrons": 5000,
+      "points": 11250,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 2,
+      "backend": "C99",
+      "seconds": 1.7951943000007304,
+      "electrons": 5000,
+      "points": 11208,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 3,
+      "backend": "C99",
+      "seconds": 0.9339344000036363,
+      "electrons": 5000,
+      "points": 11234,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 3,
+      "backend": "Numba",
+      "seconds": 0.8330964999986463,
+      "electrons": 5000,
+      "points": 11221,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 42,
+      "backend": "Numba",
+      "seconds": 0.8986264000050141,
+      "electrons": 5000,
+      "points": 11152,
+      "truncated": true
+    },
+    {
+      "voltage": 1300,
+      "radius_m": 0.009,
+      "cap": 5000,
+      "seed": 42,
+      "backend": "C99",
+      "seconds": 0.7116366000045673,
+      "electrons": 5000,
+      "points": 11189,
+      "truncated": true
+    }
+  ],
+  "summaries": [
+    {
+      "voltage": 600,
+      "Numba": {
+        "median_seconds": 0.0057957999961217865,
+        "min_seconds": 0.0057377999983145855,
+        "max_seconds": 0.005958699999609962,
+        "mean_electrons": 9.2,
+        "mean_points": 18.8,
+        "truncated_runs": 0
+      },
+      "C99": {
+        "median_seconds": 0.005077699999674223,
+        "min_seconds": 0.004637300000467803,
+        "max_seconds": 0.00558669999736594,
+        "mean_electrons": 9.0,
+        "mean_points": 19.0,
+        "truncated_runs": 0
+      },
+      "c_speedup": 1.1414222968063563
+    },
+    {
+      "voltage": 1000,
+      "Numba": {
+        "median_seconds": 2.0654031000012765,
+        "min_seconds": 1.944404800000484,
+        "max_seconds": 2.238553300005151,
+        "mean_electrons": 5000.0,
+        "mean_points": 10594.6,
+        "truncated_runs": 5
+      },
+      "C99": {
+        "median_seconds": 1.5809602000008454,
+        "min_seconds": 1.2745671000011498,
+        "max_seconds": 1.8793984000003547,
+        "mean_electrons": 5000.0,
+        "mean_points": 10564.4,
+        "truncated_runs": 5
+      },
+      "c_speedup": 1.3064232104009779
+    },
+    {
+      "voltage": 1300,
+      "Numba": {
+        "median_seconds": 2.101739199999429,
+        "min_seconds": 0.8330964999986463,
+        "max_seconds": 2.406154099997366,
+        "mean_electrons": 5000.0,
+        "mean_points": 11202.6,
+        "truncated_runs": 5
+      },
+      "C99": {
+        "median_seconds": 1.793765300004452,
+        "min_seconds": 0.7116366000045673,
+        "max_seconds": 1.8533650999961537,
+        "mean_electrons": 5000.0,
+        "mean_points": 11204.2,
+        "truncated_runs": 5
+      },
+      "c_speedup": 1.1716913020862945
+    }
+  ]
+}

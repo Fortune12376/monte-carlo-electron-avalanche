@@ -1,0 +1,110 @@
+[
+  {
+    "voltage": 600,
+    "radius": 0.0006,
+    "backend": "Numba",
+    "seeds": 20,
+    "cap": 1000,
+    "mean_electrons": 9.0,
+    "sd_electrons": 0.0,
+    "mean_points": 17.9,
+    "radial_quantiles_m": [
+      9.315145197687429e-05,
+      0.00020058920325645072,
+      0.0004718566189426098
+    ],
+    "z_rms_m": 2.281028117842234e-05,
+    "truncated_runs": 0,
+    "median_seconds": 0.005681050002749544
+  },
+  {
+    "voltage": 600,
+    "radius": 0.0006,
+    "backend": "C99",
+    "seeds": 20,
+    "cap": 1000,
+    "mean_electrons": 9.0,
+    "sd_electrons": 0.3244428422615251,
+    "mean_points": 18.3,
+    "radial_quantiles_m": [
+      9.463828227814544e-05,
+      0.0002023443206516809,
+      0.00047978812410812523
+    ],
+    "z_rms_m": 2.7350467613490685e-05,
+    "truncated_runs": 0,
+    "median_seconds": 0.004564549999486189
+  },
+  {
+    "voltage": 1000,
+    "radius": 0.003,
+    "backend": "Numba",
+    "seeds": 20,
+    "cap": 1000,
+    "mean_electrons": 1000.0,
+    "sd_electrons": 0.0,
+    "mean_points": 2306.3,
+    "radial_quantiles_m": [
+      9.317396962407841e-05,
+      0.00022195284405708587,
+      0.0004925077862608189
+    ],
+    "z_rms_m": 4.6882568095334754e-05,
+    "truncated_runs": 20,
+    "median_seconds": 0.5778446000040276
+  },
+  {
+    "voltage": 1000,
+    "radius": 0.003,
+    "backend": "C99",
+    "seeds": 20,
+    "cap": 1000,
+    "mean_electrons": 1000.0,
+    "sd_electrons": 0.0,
+    "mean_points": 2317.8,
+    "radial_quantiles_m": [
+      9.298279048359321e-05,
+      0.00022151967674449393,
+      0.0004920992055957419
+    ],
+    "z_rms_m": 5.526610700374472e-05,
+    "truncated_runs": 20,
+    "median_seconds": 0.6735050000024785
+  },
+  {
+    "voltage": 1300,
+    "radius": 0.009,
+    "backend": "Numba",
+    "seeds": 20,
+    "cap": 1000,
+    "mean_electrons": 1000.0,
+    "sd_electrons": 0.0,
+    "mean_points": 3007.65,
+    "radial_quantiles_m": [
+      9.737141489596779e-05,
+      0.00026305977634357623,
+      0.0014142800601939047
+    ],
+    "z_rms_m": 0.00011550757469713568,
+    "truncated_runs": 20,
+    "median_seconds": 1.5820626499989885
+  },
+  {
+    "voltage": 1300,
+    "radius": 0.009,
+    "backend": "C99",
+    "seeds": 20,
+    "cap": 1000,
+    "mean_electrons": 1000.0,
+    "sd_electrons": 0.0,
+    "mean_points": 3019.05,
+    "radial_quantiles_m": [
+      9.739100235484786e-05,
+      0.00026307300061514016,
+      0.0014155083305727786
+    ],
+    "z_rms_m": 0.0001220330274442449,
+    "truncated_runs": 20,
+    "median_seconds": 1.2380142000038177
+  }
+]

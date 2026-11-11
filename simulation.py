@@ -9,6 +9,7 @@ cleaned up for reproducibility and reuse.
 from __future__ import annotations
 
 import math
+import operator
 import random
 from dataclasses import dataclass
 
@@ -93,7 +94,7 @@ def _choose_cross_section(energy_ev: float):
 
 def cylindrical_field_magnitude(radius_m: float, voltage_v: float) -> float:
     """Ideal coaxial-cylinder electric-field magnitude in V/m."""
-    if radius_m <= 0:
+    if not math.isfinite(radius_m) or radius_m <= 0:
         raise ValueError("radius_m must be positive")
     return voltage_v / (radius_m * math.log(CATHODE_RADIUS_M / ANODE_RADIUS_M))
 
@@ -303,10 +304,11 @@ def simulate_avalanche(
         raise ValueError(
             "start_radius_m must lie between the secondary-suppression radius and cathode"
         )
-    if voltage_v <= 0:
+    if not math.isfinite(voltage_v) or voltage_v <= 0:
         raise ValueError("voltage_v must be positive")
-    if max_electrons < 1:
-        raise ValueError("max_electrons must be at least 1")
+    max_electrons = operator.index(max_electrons)
+    if not 1 <= max_electrons <= np.iinfo(np.intp).max:
+        raise ValueError("max_electrons must fit a positive platform integer")
 
     start_position = np.array([start_radius_m, 0.0, 0.0], dtype=np.float64)
     points_typed, processed, secondaries, truncated = _transport_kernel(

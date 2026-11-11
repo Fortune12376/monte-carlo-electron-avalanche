@@ -29,6 +29,7 @@ st.caption(
 
 with st.sidebar:
     st.header("Simulation controls")
+    backend = st.selectbox("Simulation backend", ["Numba", "C99"])
     voltage = st.slider("Anode voltage (V)", 600, 1300, 1000, 50)
     start_radius_mm = st.slider(
         "Starting radius (mm)", 0.6, 9.0, float(DEFAULT_START_RADIUS_M * 1e3), 0.1
@@ -45,20 +46,34 @@ if "result" not in st.session_state:
 
 if run_clicked:
     with st.spinner("Running Monte Carlo transport…"):
-        t0 = time.perf_counter()
-        st.session_state.result = simulate_avalanche(
-            voltage_v=float(voltage),
-            start_radius_m=float(start_radius_mm) * 1e-3,
-            seed=int(seed),
-            max_electrons=int(max_electrons),
-        )
-        st.session_state.runtime = time.perf_counter() - t0
+        try:
+            if backend == "C99":
+                from simulation_c import simulate_avalanche as run_simulation
+            else:
+                run_simulation = simulate_avalanche
+            t0 = time.perf_counter()
+            result = run_simulation(
+                voltage_v=float(voltage),
+                start_radius_m=float(start_radius_mm) * 1e-3,
+                seed=int(seed),
+                max_electrons=int(max_electrons),
+            )
+            st.session_state.result = result
+            st.session_state.runtime = time.perf_counter() - t0
+            st.session_state.backend = backend
+        except (RuntimeError, ValueError, MemoryError) as error:
+            st.error(str(error))
+            if backend == "C99":
+                st.info("Select Numba in the sidebar to run without the C library.")
+            if st.session_state.result is not None:
+                st.info("The results below are from the previous successful simulation.")
 
 result = st.session_state.result
 
 if result is None:
     st.info("Choose parameters in the sidebar and click **Run simulation**.")
 else:
+    st.caption(f"Backend: {st.session_state.get('backend', 'Numba')}")
     data = result.points
     m1, m2, m3, m4 = st.columns(4)
     m1.metric("Stored interaction points", f"{len(data):,}")
@@ -103,6 +118,7 @@ else:
         ax.set_title("Near-anode avalanche region")
         ax.legend()
         st.pyplot(fig, clear_figure=True)
+        plt.close(fig)
 
     with chamber_tab:
         fig, ax = plt.subplots(figsize=(8, 7))
@@ -123,6 +139,7 @@ else:
         ax.set_ylabel("y [mm]")
         ax.set_title("Full cylindrical chamber")
         st.pyplot(fig, clear_figure=True)
+        plt.close(fig)
 
     with view3d_tab:
         fig = plt.figure(figsize=(9, 7))
@@ -141,8 +158,10 @@ else:
         ax.set_ylabel("y [mm]")
         ax.set_zlabel("z [mm]")
         ax.set_title("3D interaction cloud")
-        ax.legend()
+        if len(data):
+            ax.legend()
         st.pyplot(fig, clear_figure=True)
+        plt.close(fig)
 
     with cross_tab:
         energies = np.linspace(0.0, 150.0, 500)
@@ -157,6 +176,7 @@ else:
         ax.set_title("Cross-section approximations used by the model")
         ax.legend()
         st.pyplot(fig, clear_figure=True)
+        plt.close(fig)
 
     with model_tab:
         st.markdown(

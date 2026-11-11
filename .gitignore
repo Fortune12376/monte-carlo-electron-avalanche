@@ -1,0 +1,33 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Native build products
+*.o
+*.obj
+*.dll
+*.so
+*.so.*
+*.dylib
+*.a
+*.lib
+/build/
+/dist/
+/csrc/tmp*/
+
+# Local tooling and OS files
+.DS_Store
+Thumbs.db
+
+# Regenerated comparisons; recorded evidence stays in tests/results/
+/tests/results/latest/
+/benchmark_results*.json
+/validation_results*.json
