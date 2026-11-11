@@ -28,7 +28,9 @@ The C99 engine in [`csrc/`](csrc/) implements transport, dynamic electron storag
 
 ## Performance and validation
 
-The original Python implementation achieved a **10× speedup with Numba JIT** over baseline Python. The C99 implementation achieved a further **1.14–1.31× speedup over Numba** in the following local configurations:
+The original Python implementation achieved a **10× speedup with Numba JIT** over baseline Python. Observed up to 3× faster execution in the deployed Streamlit app.
+
+The C99 implementation achieved a further **1.14–1.31× speedup over Numba** in the following local configurations:
 
 | Configuration | Numba median | C99 median | C speedup |
 |---|---:|---:|---:|
